@@ -31,13 +31,13 @@ def main():
     victimMac = ""
     gatewayMac = ""
 
-    try:
-        victimMac = get_mac(victimIP)
-        print("Victim MAC: ", victimMac)
-    except Exception as e:
-        print("Victim machine did not respond to ARP broadcast :(")
-        print(e)
-        quit()
+    #try:
+    victimMac = get_mac(victimIP)
+    print("Victim MAC: ", victimMac)
+    #except Exception as e:
+    #    print("Victim machine did not respond to ARP broadcast :(")
+    #    print(e)
+    #    quit()
 
     try:
         gatewayMac = get_mac(gatewayIP)
