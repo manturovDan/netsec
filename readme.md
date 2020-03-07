@@ -1,0 +1,1 @@
+All of these codes were written for education, not for hacking
