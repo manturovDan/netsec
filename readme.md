@@ -1,1 +1,1 @@
-All of these codes were written for education, not for hacking
+All of these scripts were written for education, not for hacking

@@ -1,11 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e22ee134-85c2-4897-854d-4ec69bb9d1db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YnqbiLdmWT19e1VaJ264qVN3zt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e22ee134-85c2-4897-854d-4ec69bb9d1db" name="Default Changelist" comment="" />
+      <created>1583588778465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583588778465</updated>
+      <workItem from="1583588782187" duration="242000" />
+    </task>
+    <task id="LOCAL-00001" summary="start">
+      <created>1583588882627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583588882627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start" />
+    <option name="LAST_COMMIT_MESSAGE" value="start" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1965" y="127" width="860" height="810" key="CommitChangelistDialog2" timestamp="1583588882474">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1965" y="127" width="860" height="810" key="CommitChangelistDialog2/1440.0.1920.1080/0.27.1440.873@1440.0.1920.1080" timestamp="1583588882474" />
+    <state x="2171" y="272" width="447" height="520" key="FileChooserDialogImpl" timestamp="1583588896884">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2171" y="272" width="447" height="520" key="FileChooserDialogImpl/1440.0.1920.1080/0.27.1440.873@1440.0.1920.1080" timestamp="1583588896884" />
+    <state x="2253" y="423" key="Github.ShareDialog" timestamp="1583589016626">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2253" y="423" key="Github.ShareDialog/1440.0.1920.1080/0.27.1440.873@1440.0.1920.1080" timestamp="1583589016626" />
+    <state x="1995" y="264" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1583589023300">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1995" y="264" width="800" height="535" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.27.1440.873@1440.0.1920.1080" timestamp="1583589023300" />
   </component>
 </project>
